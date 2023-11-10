@@ -44,7 +44,7 @@ function Charts() {
     try {
       const response = await instance.authInstance.get(`/pieChart/${month}`);
       const res = response.data;
-      setCategory(res.unique_category), setCategory0(res.count0), setCategory1(res.count1),
+      setCategory0(res.count0), setCategory1(res.count1),
       setCategory2(res.count2), setCategory3(res.count3)
     }
     catch (error) {
