@@ -19,10 +19,10 @@ function Cards() {
     { value: 'December', text: 'December' },
   ];
 
-  const{product, setProduct,
+  const { product, setProduct,
     month, setMonth,
     word, setWord,
-    msg, setMsg}=useContext(AppContext);
+    msg, setMsg } = useContext(AppContext);
 
   useEffect(() => {
     getDataByMonth(month)
@@ -40,13 +40,13 @@ function Cards() {
     }
   }
 
-  const getDataByWord = async (word,month) => {
+  const getDataByWord = async (word, month) => {
     try {
       const response = await instance.authInstance.get(`/by_search/${word}/${month}`);
       const len = response.data.length;
       if (len !== 0) {
         setProduct(response.data)
-        setMsg(''),setWord('')
+        setMsg(''), setWord('')
       }
       else {
         setMsg('No matching records found.')
@@ -64,7 +64,7 @@ function Cards() {
 
   const handleWordChange = () => {
     setMsg('')
-    getDataByWord(word,month)
+    getDataByWord(word, month)
   }
 
 
@@ -142,7 +142,7 @@ function Cards() {
         </div>
       </div>
 
-      
+
     </>
   )
 }

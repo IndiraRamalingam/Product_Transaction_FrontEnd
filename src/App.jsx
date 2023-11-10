@@ -8,15 +8,15 @@ import Charts from './components/Charts'
 function App() {
   return (
     <>
-       <AppProvider>
-       <Card />
-       <Statistics />
-       <Charts />
-       </AppProvider>
-         
-    
+      <AppProvider>
+        <Card />
+        <Statistics />
+        <Charts />
+      </AppProvider>
+
+
     </>
-   
+
   )
 }
 
